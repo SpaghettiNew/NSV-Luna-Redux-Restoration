@@ -1875,20 +1875,20 @@ Code shamelessly copied from apc_frame
 
 /obj/machinery/partyalarm/Topic(href, href_list)
 	..()
-	if (usr.stat || stat & (BROKEN|NOPOWER))
+	if(usr.stat || stat & (BROKEN|NOPOWER))
 		return
-	if ((usr.contents.Find(src) || ((get_dist(src, usr) <= 1) && istype(loc, /turf))) || (istype(usr, /mob/living/silicon/ai)))
+	if((usr.contents.Find(src) || ((get_dist(src, usr) <= 1) && istype(loc, /turf))) || (istype(usr, /mob/living/silicon/ai)))
 		usr.machine = src
-		if (href_list["reset"])
+		if(href_list["reset"])
 			reset()
 		else
-			if (href_list["alarm"])
+			if(href_list["alarm"])
 				alarm()
 			else
-				if (href_list["time"])
+				if(href_list["time"])
 					timing = text2num(href_list["time"])
 				else
-					if (href_list["tp"])
+					if(href_list["tp"])
 						var/tp = text2num(href_list["tp"])
 						time += tp
 						time = min(max(round(time), 0), 120)
@@ -1897,4 +1897,5 @@ Code shamelessly copied from apc_frame
 	else
 		usr << browse(null, "window=partyalarm")
 		return
+
 	return
