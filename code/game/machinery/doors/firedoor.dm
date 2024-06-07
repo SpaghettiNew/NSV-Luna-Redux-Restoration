@@ -1,5 +1,5 @@
 
-/var/const/OPEN = 1
+// /var/const/OPEN = 1
 /var/const/CLOSED = 2
 /obj/machinery/door/firedoor
 	name = "\improper Emergency Shutter"

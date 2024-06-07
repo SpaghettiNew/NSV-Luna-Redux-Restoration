@@ -207,7 +207,8 @@
 							user.x--
 						if(EAST)
 							user.x++
-				else	H.loc = src.loc
+				else
+					H.loc = src.loc
 					return 1
 			else
 				sleep(5)

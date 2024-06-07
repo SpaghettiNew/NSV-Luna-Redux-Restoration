@@ -311,7 +311,7 @@ BLIND     // can't see anything
 			usr << "Your suit will now report your vital lifesigns."
 		if(3)
 			usr << "Your suit will now report your vital lifesigns as well as your coordinate position."
-	..()
+	return
 
 /obj/item/clothing/under/verb/removetie()
 	set name = "Remove Accessory"
