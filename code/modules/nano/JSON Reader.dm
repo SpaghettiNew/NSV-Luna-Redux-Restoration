@@ -53,13 +53,13 @@ json_reader
 				i++
 
 		read_string(delim)
-			var
-				escape 	= FALSE
-				val		= ""
+			var/escape = FALSE
+			var/val = ""
+
 			while(++i <= length(json))
 				var/char = get_char()
 				if(escape)
-					escape=FALSE // WHICH STUPID ASSHOLE FORGOT THIS - N3X
+					escape = FALSE // WHICH STUPID ASSHOLE FORGOT THIS - N3X
 					switch(char)
 						if("\\", "'", "\"", "/", "u")
 							val += char

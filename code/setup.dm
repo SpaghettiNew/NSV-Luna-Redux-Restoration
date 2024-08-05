@@ -309,21 +309,6 @@ var/MAX_EXPLOSION_RANGE = 14
 #define THERMAL_PROTECTION_HAND_LEFT	0.025
 #define THERMAL_PROTECTION_HAND_RIGHT	0.025
 
-
-//bitflags for mutations
-	// Extra powers:
-#define SHADOW			(1<<10)	// shadow teleportation (create in/out portals anywhere) (25%)
-#define SCREAM			(1<<11)	// supersonic screaming (25%)
-#define EXPLOSIVE		(1<<12)	// exploding on-demand (15%)
-#define REGENERATION	(1<<13)	// superhuman regeneration (30%)
-#define REPROCESSOR		(1<<14)	// eat anything (50%)
-#define SHAPESHIFTING	(1<<15)	// take on the appearance of anything (40%)
-#define PHASING			(1<<16)	// ability to phase through walls (40%)
-#define SHIELD			(1<<17)	// shielding from all projectile attacks (30%)
-#define SHOCKWAVE		(1<<18)	// attack a nearby tile and cause a massive shockwave, knocking most people on their asses (25%)
-#define ELECTRICITY		(1<<19)	// ability to shoot electric attacks (15%)
-
-
 // String identifiers for associative list lookup
 
 // mob/var/list/mutations
@@ -435,27 +420,6 @@ var/MAX_EXPLOSION_RANGE = 14
 
 
 var/list/global_mutations = list() // list of hidden mutation things
-
-//Bluh shields
-
-
-//Damage things	//TODO: merge these down to reduce on defines
-//Way to waste perfectly good damagetype names (BRUTE) on this... If you were really worried about case sensitivity, you could have just used lowertext(damagetype) in the proc...
-#define BRUTE		"brute"
-#define BURN		"fire"
-#define TOX			"tox"
-#define OXY			"oxy"
-#define CLONE		"clone"
-#define HALLOSS		"halloss"
-
-#define STUN		"stun"
-#define WEAKEN		"weaken"
-#define PARALYZE	"paralize"
-#define IRRADIATE	"irradiate"
-#define AGONY		"agony" // Added in PAIN!
-#define STUTTER		"stutter"
-#define EYE_BLUR	"eye_blur"
-#define DROWSY		"drowsy"
 
 //I hate adding defines like this but I'd much rather deal with bitflags than lists and string searches
 #define BRUTELOSS 1
@@ -593,6 +557,8 @@ var/list/TAGGERLOCATIONS = list("Disposals",
 #define ROUNDSTART_LOGOUT_REPORT_TIME 6000 //Amount of time (in deciseconds) after the rounds starts, that the player disconnect report is issued.
 
 //Damage things
+//TODO: merge these down to reduce on defines
+//Way to waste perfectly good damagetype names (BRUTE) on this... If you were really worried about case sensitivity, you could have just used lowertext(damagetype) in the proc...
 
 #define CUT 		"cut"
 #define BRUISE		"bruise"
@@ -612,6 +578,8 @@ var/list/TAGGERLOCATIONS = list("Disposals",
 #define EYE_BLUR	"eye_blur"
 #define DROWSY		"drowsy"
 
+#define AGONY		"agony" // Added in PAIN!
+
 ///////////////////ORGAN DEFINES///////////////////
 
 #define ORGAN_CUT_AWAY 1
@@ -625,10 +593,6 @@ var/list/TAGGERLOCATIONS = list("Disposals",
 #define SALVED 512
 #define ORGAN_DEAD 1024
 #define ORGAN_MUTATED 2048
-
-#define ROUNDSTART_LOGOUT_REPORT_TIME 6000 //Amount of time (in deciseconds) after the rounds starts, that the player disconnect report is issued.
-
-
 
 //Please don't edit these values without speaking to Errorage first	~Carn
 //Admin Permissions

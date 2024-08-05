@@ -1,17 +1,8 @@
-#define SOLID 1
-#define LIQUID 2
-#define GAS 3
 #define FOOD_METABOLISM 0.4
 #define REAGENTS_OVERDOSE 30
-#define REM REAGENTS_EFFECT_MULTIPLIER
-
-//Some on_mob_life() procs check for alien races.
-#define IS_DIONA 1
-#define IS_VOX 2
 
 //The reaction procs must ALWAYS set src = null, this detaches the proc from the object (the reagent)
 //so that it can continue working when the reagent is deleted while the proc is still active.
-
 
 datum/reagent
 	var/name = "Reagent"

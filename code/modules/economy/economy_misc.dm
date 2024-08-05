@@ -38,7 +38,7 @@
 #define MINERALS 8
 
 #define EMERGENCY 9
-#define GAS 10
+#define GAS_E 10 // I know this is BAD name, but ehh (This shit is used in events, that's why E is here)
 #define MAINTENANCE 11
 #define ELECTRICAL 12
 #define ROBOTICS 13

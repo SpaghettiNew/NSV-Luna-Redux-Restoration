@@ -276,7 +276,7 @@
 		src.use(15)
 	else
 		usr << "<span class='notice'>\blue You cannot do that.</span>"
-	..()
+	return
 
 /obj/item/stack/cable_coil/attackby(obj/item/weapon/W, mob/user)
 	..()

@@ -108,11 +108,6 @@ var/list/valid_secondary_effect_types = list(\
 		if(prob(25))
 			my_effect.trigger = rand(1,4)
 
-#define TRIGGER_PLASMA 9
-#define TRIGGER_OXY 10
-#define TRIGGER_CO2 11
-#define TRIGGER_NITRO 12
-
 /obj/machinery/artifact/process()
 
 	var/turf/L = loc

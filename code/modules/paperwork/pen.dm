@@ -87,8 +87,8 @@
 /*
  * Parapens
  */
- /obj/item/weapon/pen/paralysis
- 	desc = "It's a black ink pen with a sharp point and a carefully engraved \"Waffle Co.\""
+/obj/item/weapon/pen/paralysis
+	desc = "It's a black ink pen with a sharp point and a carefully engraved \"Waffle Co.\""
 	flags = FPRINT | TABLEPASS | OPENCONTAINER
 	origin_tech = "materials=2;syndicate=5"
 

@@ -1897,5 +1897,4 @@ Code shamelessly copied from apc_frame
 	else
 		usr << browse(null, "window=partyalarm")
 		return
-
 	return

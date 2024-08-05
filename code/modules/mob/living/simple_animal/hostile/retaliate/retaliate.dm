@@ -23,7 +23,7 @@
 	return see
 
 /mob/living/simple_animal/hostile/retaliate/proc/Retaliate()
-	..()
+	return
 	var/list/around = view(src, 7)
 
 	for(var/atom/movable/A in around)

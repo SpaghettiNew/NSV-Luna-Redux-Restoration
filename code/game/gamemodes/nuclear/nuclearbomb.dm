@@ -209,8 +209,8 @@ var/bomb_set
 		src.extended = 1
 	return
 
-obj/machinery/nuclearbomb/proc/nukehack_win(mob/user as mob)
-	var/dat as text
+/obj/machinery/nuclearbomb/proc/nukehack_win(mob/user as mob)
+	var/dat
 	dat += "<TT><B>Nuclear Fission Explosive</B><BR>\nNuclear Device Wires:</A><HR>"
 	for(var/wire in src.wires)
 		dat += text("[wire] Wire: <A href='?src=\ref[src];wire=[wire];act=wire'>[src.wires[wire] ? "Mend" : "Cut"]</A> <A href='?src=\ref[src];wire=[wire];act=pulse'>Pulse</A><BR>")

@@ -251,11 +251,10 @@ proc/slur(phrase)
 	while(index)
 		phrase = copytext(phrase, 1, index) + "ÿ" + copytext(phrase, index+1)
 		index = findtext(phrase, "&#255;")
-	var
-		leng=length(phrase)
-		counter=length(phrase)
-		newphrase=""
-		newletter=""
+	var/leng = length(phrase)
+	var/counter = length(phrase)
+	var/newphrase = ""
+	var/newletter = ""
 
 	while(counter>=1)
 		newletter=copytext(phrase,(leng-counter)+1,(leng-counter)+2)

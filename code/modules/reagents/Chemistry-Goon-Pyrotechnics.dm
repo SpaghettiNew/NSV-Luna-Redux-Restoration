@@ -1,9 +1,3 @@
-#define SOLID 1
-#define LIQUID 2
-#define GAS 3
-
-#define REM REAGENTS_EFFECT_MULTIPLIER
-
 /* commented out until further notice
 
 /datum/reagent/clf3
