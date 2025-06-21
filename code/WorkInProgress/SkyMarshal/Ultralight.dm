@@ -363,10 +363,17 @@ area/proc/ul_Prep()
 #undef UL_I_EXTINGUISHED
 #undef UL_I_ONZERO
 #undef ul_LightingEnabled
+
+#ifdef ul_LightingResolution
 #undef ul_LightingResolution
+#endif
+
 #undef ul_Steps
 #undef ul_FalloffStyle
 #undef ul_Layer
 #undef ul_TopLuminosity
 #undef ul_Clamp
+
+#ifdef ul_LightLevelChangedUpdates
 #undef ul_LightLevelChangedUpdates
+#endif

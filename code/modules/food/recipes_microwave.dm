@@ -1151,9 +1151,9 @@
 	result = /obj/item/weapon/reagent_containers/food/snacks/tofurkey
 
 
-/*/*/*/*/*/*/*/*/*/*/*/*
-/*/*NSV LUNA RECIPES*/*/
-*/*/*/*/*/*/*/*/*/*/*/*/
+//////////////////////
+// NSV LUNA RECIPES //
+//////////////////////
 
 
 

@@ -1,7 +1,6 @@
-// honk
-#define DAMAGE			1
-#define FIRE			2
-#define EQUIP			3
+#define POD_DAMAGE 1
+#define POD_FIRE 2
+#define POD_EQUIP 3
 
 /obj/spacepod
 	name = "\improper space pod"
@@ -43,8 +42,8 @@
 	name = "Pod-[rand(100,999)]"
 	if(!pod_overlays)
 		pod_overlays = new/list(2)
-		pod_overlays[DAMAGE] = image(icon, icon_state="pod_damage")
-		pod_overlays[FIRE] = image(icon, icon_state="pod_fire")
+		pod_overlays[POD_DAMAGE] = image(icon, icon_state="pod_damage")
+		pod_overlays[POD_FIRE] = image(icon, icon_state="pod_fire")
 	bound_width = 64
 	bound_height = 64
 //	dir = EAST
@@ -100,22 +99,22 @@
 /obj/spacepod/proc/update_icons()
 	if(!pod_overlays)
 		pod_overlays = new/list(2)
-		pod_overlays[DAMAGE] = image(icon, icon_state="pod_damage")
-		pod_overlays[FIRE] = image(icon, icon_state="pod_fire")
+		pod_overlays[POD_DAMAGE] = image(icon, icon_state="pod_damage")
+		pod_overlays[POD_FIRE] = image(icon, icon_state="pod_fire")
 
 	if(selected && selected.overlay_icon)
 		pod_overlays.len = 3
-		pod_overlays[EQUIP] = image(icon, icon_state="[src.selected.overlay_icon]")
-		overlays += pod_overlays[EQUIP]
+		pod_overlays[POD_EQUIP] = image(icon, icon_state="[src.selected.overlay_icon]")
+		overlays += pod_overlays[POD_EQUIP]
 
 	if(health <= round(initial(health)/2))
-		overlays += pod_overlays[DAMAGE]
+		overlays += pod_overlays[POD_DAMAGE]
 		if(health <= round(initial(health)/4))
-			overlays += pod_overlays[FIRE]
+			overlays += pod_overlays[POD_FIRE]
 		else
-			overlays -= pod_overlays[FIRE]
+			overlays -= pod_overlays[POD_FIRE]
 	else
-		overlays -= pod_overlays[DAMAGE]
+		overlays -= pod_overlays[POD_DAMAGE]
 
 /obj/spacepod/bullet_act(var/obj/item/projectile/P)
 	if(P.damage && !P.nodamage)
@@ -838,6 +837,6 @@
 		return ..()
 
 
-#undef DAMAGE
-#undef FIRE
-#undef EQUIP
+#undef POD_DAMAGE
+#undef POD_FIRE
+#undef POD_EQUIP

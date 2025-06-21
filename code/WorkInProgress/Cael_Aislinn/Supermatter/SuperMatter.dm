@@ -1,9 +1,3 @@
-#define NITROGEN_RETARDATION_FACTOR 4	//Higher == N2 slows reaction more
-#define THERMAL_RELEASE_MODIFIER 50		//Higher == less heat released during reaction
-#define PLASMA_RELEASE_MODIFIER 750		//Higher == less plasma released by reaction
-#define OXYGEN_RELEASE_MODIFIER 1500	//Higher == less oxygen released at high temperature/power
-#define REACTION_POWER_MODIFIER 1.4		//Higher == more overall power
-
 /obj/machinery/engine/supermatter
 	name = "Supermatter"
 	desc = "A strangely translucent and iridescent crystal.  \red You get headaches just from looking at it."

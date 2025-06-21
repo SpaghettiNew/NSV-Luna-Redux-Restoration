@@ -1200,9 +1200,9 @@ table tr:first-child th:first-child { border: none;}
 			pulse(t1)
 
 	updateUsrDialog()
-/*/*/*/*/*/*/*/*/*/*/*/*
-/*/*AREA LOCKDOWN*/*/*/
-*/*/*/*/*/*/*/*/*/*/*/
+
+// AREA LOCKDOWN
+
 /obj/machinery/alarm/proc
 	air_doors_close(manual)
 		var/area/A = get_area(loc)

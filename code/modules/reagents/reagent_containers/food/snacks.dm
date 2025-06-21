@@ -2812,9 +2812,9 @@
 		reagents.add_reagent("radium", 2)
 		bitesize = 2
 
-/*/*/*/*/*/*/*/*/*
-/*/*LUNA FOOD*/*/
-*/*/*/*/*/*/*/*/*/
+/////////////////
+////LUNA FOOD////
+/////////////////
 /obj/item/weapon/reagent_containers/food/snacks/rawsticks
 	name = "raw potato sticks"
 	desc = "Maybe you should cook it first?"
